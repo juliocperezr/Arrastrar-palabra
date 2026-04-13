@@ -168,11 +168,32 @@ button:disabled{
     display:none;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:1100px){
+/* ===== RESPONSIVE PREMIUM ESCALADO ===== */
 
-    .game-container{
-        grid-template-columns:1.8fr .9fr;
+.wrapper-scale{
+    transform-origin: top left;
+    width: 100%;
+}
+
+/* Pantallas medianas */
+@media (max-width: 1300px){
+
+    .wrapper-scale{
+        transform: scale(0.92);
+        width: 108%;
+    }
+
+    h2{
+        font-size:34px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1100px){
+
+    .wrapper-scale{
+        transform: scale(0.82);
+        width: 122%;
     }
 
     h2{
@@ -180,18 +201,30 @@ button:disabled{
     }
 }
 
-@media(max-width:900px){
+/* Celulares grandes */
+@media (max-width: 900px){
 
-    .game-container{
-        grid-template-columns:1fr;
+    .wrapper-scale{
+        transform: scale(0.72);
+        width: 138%;
     }
+}
 
-    .left{
-        grid-template-columns:1fr;
+/* Celulares */
+@media (max-width: 700px){
+
+    .wrapper-scale{
+        transform: scale(0.62);
+        width: 160%;
     }
+}
 
-    .buttons{
-        justify-content:center;
+/* Celulares pequeños */
+@media (max-width: 500px){
+
+    .wrapper-scale{
+        transform: scale(0.52);
+        width: 192%;
     }
 }
 
