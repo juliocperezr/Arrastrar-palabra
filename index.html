@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrastra y Aprende PRO</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="wrapper-scale">
+<div class="container">
+
+    <h2>🎯 Arrastra las palabras correctas</h2>
+
+    <div class="game-container">
+
+        <!-- IZQUIERDA -->
+        <div class="game-area">
+
+            <div class="left">
+
+                <div class="dropzone" data-correct="dignidad">
+                    <span></span>
+                    <p>Los protocolos garantizan el respeto irrestricto a la dignidad, la inclusión y 
+                        la igualdad sustantiva, alineándose con el principio de la NEM de crear entornos escolares seguros y 
+                        libres de violencia.</p>
+                </div>
+
+                <div class="dropzone" data-correct="paz">
+                    <span></span>
+                    <p>Se vinculan al promover la resolución pacífica de conflictos y medidas restaurativas en lugar de solo
+                         punitivas, buscando la reparación del daño y la no repetición.</p>
+                </div>
+
+                <div class="dropzone" data-correct="comunidad">
+                    <span></span>
+                    <p>La gestión es democrática e involucra a padres, docentes y alumnos en la prevención y detección de 
+                        situaciones de riesgo, alineado con el trabajo de la NEM.</p>
+                </div>
+
+            </div>
+
+            <div class="buttons-area">
+
+    <div class="buttons">
+        <button id="checkBtn" onclick="checkAnswers()" disabled>Verificar</button>
+        <button onclick="resetGame()">Reiniciar</button>
+    </div>
+
+    <div id="result" class="result-message"></div>
+
+</div>
+
+        </div>
+
+        <!-- DERECHA -->
+        <div class="right-panel">
+
+            <!-- Banco de palabras -->
+            <div class="right" id="wordBank">
+
+                <div class="draggable" draggable="true" data-value="comunidad">
+                    Participación Comunitaria
+                </div>
+
+                <div class="draggable" draggable="true" data-value="paz">
+                    Cultura de la Paz
+                </div>
+                <div class="draggable" draggable="true" data-value="dignidad">
+                    Respeto de la Dignidad Humana
+                </div>
+
+                
+
+            </div>
+
+            <!-- Resultado oculto -->
+            <div id="result" class="result-box hidden"></div>
+
+        </div>
+
+    </div>
+
+</div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

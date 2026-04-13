@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f3f3f3;
+    padding:20px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+h2{
+    text-align:center;
+    color:#661639;
+    font-size:1.2rem;
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+/* ===== LAYOUT ===== */
+.game-container{
+    display:grid;
+    grid-template-columns: 2.2fr 0.9fr;
+    gap:20px;
+    align-items:start;
+}
+
+/* ===== ÁREA IZQUIERDA ===== */
+.left{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+/* ===== TARJETAS ===== */
+.dropzone{
+    background:white;
+    border-radius:14px;
+    padding:16px;
+    min-height:230px;
+    position:relative;
+    border-top:5px solid #661639;
+    box-shadow:0 4px 10px rgba(0,0,0,.05);
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.dropzone h3{
+    font-size:16px;
+    color:#222;
+    line-height:1.3;
+}
+
+.dropzone span{
+    flex:1;
+    border:2px dashed #b52b57;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    min-height:95px;
+}
+
+/* ===== PANEL DERECHO ===== */
+.right-panel{
+    background:white;
+    border:2px solid #ceb585;
+    border-radius:14px;
+    padding:14px;
+}
+
+.right{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* ===== PALABRAS ===== */
+.draggable{
+    background:#9e294b;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    text-align:center;
+    font-size:16px;
+    cursor:grab;
+    transition:.25s;
+    font-weight:500;
+}
+
+.draggable:hover{
+    background:#661639;
+    transform:translateY(-2px);
+}
+
+/* ===== BOTONES ===== */
+.buttons{
+    grid-column:1 / -1;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+}
+
+button{
+    border:none;
+    background:#661639;
+    color:white;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.25s;
+}
+
+button:hover{
+    background:#9e294b;
+}
+
+button:disabled{
+    background:#999;
+    cursor:not-allowed;
+}
+
+/* ===== RESULTADOS ===== */
+.correct{
+    border-top:5px solid #2e7d32;
+    background:#eef9ef;
+    font-size: 1rem;
+}
+
+.incorrect{
+    border-top:5px solid #c62828;
+    background:#fff0f0;
+    font-size: 1rem;
+}
+
+.result-box{
+    background:white;
+    border-radius:14px;
+    min-height:320px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    padding:20px;
+}
+
+.result-success{
+    color:#2e7d32;
+}
+
+.result-error{
+    color:#c62828;
+}
+
+.hidden{
+    display:none;
+}
+
+/* ===== RESPONSIVE PREMIUM ESCALADO ===== */
+
+.wrapper-scale{
+    transform-origin: top left;
+    width: 100%;
+}
+
+/* Pantallas medianas */
+@media (max-width: 1300px){
+
+    .wrapper-scale{
+        transform: scale(0.92);
+        width: 108%;
+    }
+
+    h2{
+        font-size:34px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1100px){
+
+    .wrapper-scale{
+        transform: scale(0.82);
+        width: 122%;
+    }
+
+    h2{
+        font-size:30px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 900px){
+
+    .wrapper-scale{
+        transform: scale(0.72);
+        width: 138%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 700px){
+
+    .wrapper-scale{
+        transform: scale(0.62);
+        width: 160%;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 500px){
+
+    .wrapper-scale{
+        transform: scale(0.52);
+        width: 192%;
+    }
+}
+
+/* ===== ÁREA BOTONES + MENSAJE ===== */
+.buttons-area{
+    grid-column:1 / -1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:25px;
+}
+
+/* BOTONES CENTRADOS */
+.buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+}
+
+/* MENSAJE DEBAJO */
+.result-message{
+    margin-top:18px;
+    font-size:1.1rem;
+    font-weight:bold;
+    text-align:center;
+    min-height:45px;
+}
+
+/* Estados */
+.result-success{
+    color:#2e7d32;
+}
+
+.result-error{
+    color:#ff0000;
+}
